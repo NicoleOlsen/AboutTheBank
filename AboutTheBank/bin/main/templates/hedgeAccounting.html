@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>About The Bank</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    	<div class="container">
+	  	<h2>Hedge Accounting</h2>
+		    <div class="container">
+			<h3>Hedge relatonship</h3>
+			<ul class="list-group">
+ 				<li class="list-group-item disabled">
+ 				- can be effective or ineffective <br>
+				- consists of two sides: hedged and hedging<br>
+ 				</li>
+			</ul>
+			</div>
+			<div class="container">
+			<h3>Hedging</h3>
+			<ul class="list-group">
+				<li class="list-group-item disabled">
+				- an strategy of minimizing potential investment losses<br>
+				- this is done by taking an offsetting position in a related derivative whose value changes inversely<br>
+				- the goal isn't increasing earnings but to protecting from different risks<br>
+ 				</li>
+			</ul>
+			</div> 
+			<div class="container">
+			<h3>Hedge effectiveness</h3>
+			<ul class="list-group">
+				<li class="list-group-item disabled">
+				- an extent to which a hedge relationship results in intended offsetting changes (fair value or cash flows)<br>
+				- effectiveness testing parameters: prospective, retrospective<br>
+ 				</li>
+			</ul>
+			</div> 
+			<div class="container">
+			<h3>Prospective</h3>
+			<ul class="list-group">
+				<li class="list-group-item disabled">
+				- value changes of the hedged item are expected to be offset almost 100% by the changes of the hedging instrument<br>
+ 				</li>
+			</ul>
+			</div> 
+			<div class="container">
+			<h3>Retrospective</h3>
+			<ul class="list-group">
+				<li class="list-group-item disabled">
+				- value changes of the hedged item must have been offset by 80%-125% by the change in the value of the hedging instrument<br>
+ 				</li>
+			</ul>
+			</div> 
+			<div class="container">
+			<h3>Hedges Supported</h3>
+			<ul class="list-group">
+				<li class="list-group-item disabled">
+				Foreign Exchange (FX) Cash Flow Hedge<br>
+				- used to hedge an anticipated future payment or receipt of a fixed amount of foreign currency<br>
+				- a cross currency swap is used to hedge a foreign currency debt or asset<br>
+				- testing for the hedge is based on the HDM*<br>
+				
+				Interest Rate (IR) Cash Flow Hedge<br>
+				- allows hedging of interest rate risk of a floating rate debt or investment using a variable-to-fixed rate swap or interest rate options such as caps and floors<br>
+				- testing for the hedge can be based on fair value*<br>
+				
+				Interest Rate Fair Value Hedge<br>
+				- used to hedge changes of fair value of a bond that is attributable to changes in a benchmark interest rate, such as LIBOR, i.e. an interest rate fair value hedge where fixed rate debt is swapped for floating rate debt<br>
+				- effectiveness is evaluated by comparing the change in value of the bond to the change in value of the swap<br>
+				
+				Commodity Hedge<br>
+				- allows hedging of a commodity contract using a commodity forward<br>
+				- testing for the hedge can be based on fair value*<br>
+				
+				*HDM = Hypothetical Derivative Method = testing for the hedge based on fair value<br>				
+				</li>
+			</ul>
+			</div> 
+	  	</div>
+	</div>
+</div>
+</body>
+</html>

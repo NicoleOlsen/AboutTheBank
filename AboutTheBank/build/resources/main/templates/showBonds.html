@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>About The Bank</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+    	<div class="container">
+	  	<h2>Securities</h2>
+	  	
+	  	<a href="#" class="list-group-item">Medium term note/Commercial paper (share of a medium or short-term claim)</a>
+			    <a href="#" class="list-group-item">Bond (share of a long term claim)</a>
+			    <a href="#" class="list-group-item">Share/Equities (share in the capital of a company)</a>
+	    	</a>
+		    	
+		    <div class="container">
+			<h3>Bond</h3>
+			<ul class="list-group">
+				<li class="list-group-item">Form of borrowing, where lender receives periodic interests and the amount borrowed.</li>
+ 				<li class="list-group-item disabled">
+ 				CHARACTERISTICS <br>
+				fixed-income securities - lender can anticipate the exact amount of cash received<br>
+				low risk - in case of bankruptcy, bondholders must be repaid from a liquidation in full before any shareholders are paid anything<br>
+				<br>				
+				EXAMPLE<br>
+				goverment needs money for roads and the amount needed is higher than a bank can provide<br>
+				<br>		
+				ATTRIBUTES<br>
+				buyer = lender<br>
+				face value = amout borrowed<br>
+				maturity date = date on which the issuer must repay the amount borrowed<br>
+				interest - with rate and schedule (interest if often referred to as bond’s yield or coupon)<br>
+					- fixed interest<br>
+					- variable rate (calculated on predetermined spread above some benchmark)<br>
+				<br>
+				Example:<br>
+				corporate bond with a face value of $1,000, a coupon of 5% paid annually, and a maturity of 10 years<br>
+				of $50 ($1,000 x 0.05) of interest per year for the next 10 years (because most corporate bonds pay <br>
+				interest semi-annually by convention. You'd then receive two payments of $25 a year for 10 years.<br>
+				When the bond matures in a decade, you'd then get your $1,000 back.<br>
+ 				</li>
+			</ul>
+			</div>
+			
+			<h4>Capture Bond</h4>
+			<form>
+				<div class="form-group">
+			    <label for="exampleFormControlInput1">Trade date</label>
+				    <div class='input-group date' id='datetimepicker1'>
+	                    <input type='text' class="form-control" />
+	                    <span class="input-group-addon">
+	                        <span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                </div>
+				</div>
+				<div class="form-group">
+			    <label for="exampleFormControlInput1">Maturity date</label>
+				    <div class='input-group date' id='datetimepicker1'>
+	                    <input type='text' class="form-control" />
+	                    <span class="input-group-addon">
+	                        <span class="glyphicon glyphicon-calendar"></span>
+	                    </span>
+	                </div>
+				</div>
+				<div class="form-group">
+				    <label for="exampleFormControlSelect1">Buyer</label>
+				    <select class="form-control" id="exampleFormControlSelect1">
+				      <option>1</option>
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				    </select>
+				  </div>
+				  <div class="form-group">
+				    <label for="exampleFormControlSelect1">Seller</label>
+				    <select class="form-control" id="exampleFormControlSelect1">
+				      <option>1</option>
+				      <option>2</option>
+				      <option>3</option>
+				      <option>4</option>
+				      <option>5</option>
+				    </select>
+				  </div>
+			
+			  <div class="form-group">
+			    <label for="exampleFormControlInput1">Notional</label>
+			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			  <div class="form-group">
+			    <label for="exampleFormControlInput1">Rate</label>
+			    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+			  </div>
+			</form>
+			<div class="container">
+			    <div th:if="${not #lists.isEmpty(bonds)}">
+			        <h4>Saved Bonds</h4>   
+			        <table class="table table-striped">
+			            <tr>
+			                <th>ID</th>
+			                <th>Buyer</th>
+			                <th>Seller</th>
+			                <th>Trade date</th>
+			                <th>Maturity date</th>
+			                <th>Rate type</th>
+			                <th>Fixed rate</th>
+			                <th>Floating rate</th>
+			                <th>Schedule</th>
+			            </tr>
+			            <tr th:each="bond : ${bonds}">
+			                <td th:text="${bond.id}">ID</td>
+			                <td th:text="${bond.buyer}">Buyer</td>
+			                <td th:text="${bond.seller}">Seller</td>
+			                <td th:text="${bond.tradeDate}">Trade date</td>
+			                <td th:text="${bond.maturityDate}">Maturity date</td>
+			                <td th:text="${bond.rateType}">Rate type</td>
+			                <td th:text="${bond.fixedRate}">Fixed rate</td>
+			                <td th:text="${bond.floatingRate}">Floating rate</td>
+			                <td th:text="${bond.schedule}">Schedule</td>
+			            </tr>
+			        </table>
+			    </div>
+			</div>
+		  <button type="button" class="btn">Refresh</button>
+	  	</div>
+	</div>
+</div>
+</body>
+</html>
